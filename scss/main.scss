@@ -1,3 +1,8 @@
 @use "./utils/normalize";
+@use "./utils/variables";
 @use "./utils/globals";
 @use "./blocks/attribution";
+@use "./blocks/section";
+@use "./blocks/container";
+@use "./blocks/product";
+@use "./blocks/button";

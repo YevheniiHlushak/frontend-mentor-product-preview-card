@@ -190,9 +190,29 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
+:root {
+  --color-white: #ffffff;
+  --color-cream: #f2eae2;
+  --color-black: #1c232b;
+  --color-grey: #6c7289;
+  --color-green-500: #3d8168;
+  --color-green-700: #1a4032;
+  --border-radius: 0.5rem;
+  --heading-font-size: 2rem;
+  --font-family-main: "Montserrat";
+  --font-family-accent: "Fraunces";
+  --transition-duration: 250ms;
+  --outline: 0.1875rem solid rgb(255, 188, 63);
+  --tablet: 48rem;
+  --desktop: 90rem;
+}
+
 body {
+  font-family: "Montserrat", sans-serif;
   font-size: 0.875rem;
-  background-color: var(--color-creme);
+  font-weight: 500;
+  color: var(--color-grey);
+  background-color: var(--color-cream);
 }
 
 main {
@@ -208,4 +228,94 @@ main {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.section {
+  padding-block: 5rem 10.75rem;
+}
+
+.container {
+  padding-inline: 0.75rem;
+}
+
+.product__card {
+  width: clamp(350px, 50vw, 600px);
+  background-color: var(--color-white);
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+.product__image {
+  width: 100%;
+}
+.product__body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.product__details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.product__category {
+  font-size: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.product__title {
+  font-family: var(--font-family-accent), sans-serif;
+  font-size: var(--heading-font-size);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-black);
+}
+.product__description {
+  line-height: 1.6;
+}
+.product__price {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  font-family: var(--font-family-accent);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-green-500);
+}
+.product__price::after {
+  content: "$169.99";
+  font-size: 13px;
+  font-family: var(--font-family-main);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-grey);
+  text-decoration: line-through;
+}
+.product__order-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+  color: var(--color-white);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.button {
+  width: 100%;
+  height: 3.125rem;
+  padding: 1.125rem 5.5rem;
+  background-color: var(--color-green-500);
+  border: none;
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-duration);
+}
+.button:hover, .button:focus {
+  background-color: var(--color-green-700);
+}
+.button:focus, .button:focus-visible {
+  outline: var(--outline);
+  outline-offset: 0.1875rem;
 }/*# sourceMappingURL=main.css.map */
