@@ -1,7 +1,21 @@
 .attribution {
-  font-size: 0.6875rem;
+  padding-block: 0.9375rem;
+  font-family: var(--font-family-accent);
+  font-size: 0.875rem;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--color-green-500);
+
+  &:hover,
+  &:focus {
+    color: var(--color-green-700);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: var(--outline);
+    outline-offset: 0.1875rem;
+    border-radius: var(--border-radius);
+  }
 }
