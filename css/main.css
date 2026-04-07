@@ -203,8 +203,6 @@ svg * {
   --font-family-accent: "Fraunces";
   --transition-duration: 250ms;
   --outline: 0.1875rem solid rgb(255, 188, 63);
-  --tablet: 48rem;
-  --desktop: 90rem;
 }
 
 body {
@@ -222,16 +220,26 @@ main {
 }
 
 .attribution {
-  font-size: 0.6875rem;
+  padding-block: 0.9375rem;
+  font-family: var(--font-family-accent);
+  font-size: 0.875rem;
   text-align: center;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--color-green-500);
+}
+.attribution a:hover, .attribution a:focus {
+  color: var(--color-green-700);
+}
+.attribution a:focus, .attribution a:focus-visible {
+  outline: var(--outline);
+  outline-offset: 0.1875rem;
+  border-radius: var(--border-radius);
 }
 
 .section {
-  padding-block: 5rem 10.75rem;
+  padding-block: 4.125rem;
 }
 
 .container {
@@ -239,19 +247,36 @@ main {
 }
 
 .product__card {
-  width: clamp(350px, 50vw, 600px);
+  width: clamp(21.875rem, 50vw, 25rem);
   background-color: var(--color-white);
   overflow: hidden;
   border-radius: var(--border-radius);
 }
+@media screen and (min-width: 48rem) {
+  .product__card {
+    width: 37.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .product__image {
   width: 100%;
+}
+@media screen and (min-width: 48rem) {
+  .product__image {
+    height: 100%;
+  }
 }
 .product__body {
   padding: 2rem;
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .product__body {
+    row-gap: 2rem;
+  }
 }
 .product__details {
   display: flex;
@@ -261,7 +286,7 @@ main {
 .product__category {
   font-size: 0.75rem;
   line-height: 1.2;
-  letter-spacing: 5px;
+  letter-spacing: 0.3125rem;
   text-transform: uppercase;
 }
 .product__title {
@@ -277,16 +302,16 @@ main {
 .product__price {
   display: flex;
   align-items: center;
-  column-gap: 16px;
+  column-gap: 1rem;
   font-family: var(--font-family-accent);
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1;
   color: var(--color-green-500);
 }
 .product__price::after {
   content: "$169.99";
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-family: var(--font-family-main);
   font-weight: 500;
   line-height: 1.2;
@@ -297,7 +322,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 8px;
+  column-gap: 0.5rem;
   color: var(--color-white);
   font-weight: 700;
   line-height: 1.1;
@@ -305,7 +330,6 @@ main {
 
 .button {
   width: 100%;
-  height: 3.125rem;
   padding: 1.125rem 5.5rem;
   background-color: var(--color-green-500);
   border: none;
@@ -318,4 +342,9 @@ main {
 .button:focus, .button:focus-visible {
   outline: var(--outline);
   outline-offset: 0.1875rem;
+}
+@media screen and (min-width: 48rem) {
+  .button {
+    padding-inline: 3.9375rem;
+  }
 }/*# sourceMappingURL=main.css.map */
