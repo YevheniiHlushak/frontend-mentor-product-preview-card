@@ -67,8 +67,7 @@
     line-height: 1;
     color: var(--color-green-500);
 
-    &::after {
-      content: "$169.99";
+    &--crossed-out {
       font-size: 0.8125rem;
       font-family: var(--font-family-main);
       font-weight: 500;

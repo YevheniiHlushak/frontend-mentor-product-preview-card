@@ -239,7 +239,7 @@ main {
 }
 
 .section {
-  padding-block: 4.125rem;
+  padding-block: 6.825rem;
 }
 
 .container {
@@ -309,8 +309,7 @@ main {
   line-height: 1;
   color: var(--color-green-500);
 }
-.product__price::after {
-  content: "$169.99";
+.product__price--crossed-out {
   font-size: 0.8125rem;
   font-family: var(--font-family-main);
   font-weight: 500;
@@ -347,4 +346,17 @@ main {
   .button {
     padding-inline: 3.9375rem;
   }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */
